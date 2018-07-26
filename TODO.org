@@ -1,4 +1,4 @@
-* Todo [71%]
+* Todo [75%]
 ** DONE Install knobs, stlyed components, babel styled
    CLOSED: [2018-07-25 Wed 22:45]
 ** DONE Five stars - basic react components
@@ -10,6 +10,8 @@
 ** DONE onClick - actions, withState?
    CLOSED: [2018-07-26 Thu 16:11]
 ** TODO Highlight stars on hover - actions panel for investigating mousemove, mouse enter, mouse leave
+** DONE Save to an api - api object
+   CLOSED: [2018-07-26 Thu 16:45]
 ** TODO Save to an api - Context
 
 
