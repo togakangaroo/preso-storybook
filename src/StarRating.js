@@ -1,11 +1,11 @@
 import React from 'react'
 
-const repeat = times => fn => Array(5).fill(0).map(fn)
+const repeat = times => fn => Array(times).fill(0).map(fn)
 
 const Star = () => `★`
 
-const StarRating = () => (
-    React.createElement(`div`, ...repeat(5)(() => (
+const StarRating = ({starCount = 5}) => (
+    React.createElement(`div`, null, ...repeat(starCount)(() => (
         <Star />
     )))
 )

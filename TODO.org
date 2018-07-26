@@ -1,8 +1,10 @@
-* Todo [28%]
+* Todo [37%]
 ** DONE Install knobs, stlyed components, babel styled
    CLOSED: [2018-07-25 Wed 22:45]
 ** DONE Five stars - basic react components
    CLOSED: [2018-07-25 Wed 23:36]
+** DONE Star count - knobs
+   CLOSED: [2018-07-26 Thu 00:16]
 ** TODO Setting start value - knobs, input, styled components
 ** TODO Set value initially - wrapper, knobs for value)
 ** TODO Save on click

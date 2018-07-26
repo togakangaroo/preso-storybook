@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobs, number } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import StarRating from '../StarRating.js'
@@ -8,5 +8,5 @@ import StarRating from '../StarRating.js'
 storiesOf(`Star System`, module)
     .addDecorator(withKnobs)
     .add(`Star rating`, () => (
-        <StarRating />
+        <StarRating starCount={number(`Star Count`, 5)}/>
     ))
