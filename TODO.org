@@ -1,12 +1,12 @@
-* Todo [37%]
+* Todo [50%]
 ** DONE Install knobs, stlyed components, babel styled
    CLOSED: [2018-07-25 Wed 22:45]
 ** DONE Five stars - basic react components
    CLOSED: [2018-07-25 Wed 23:36]
 ** DONE Star count - knobs
    CLOSED: [2018-07-26 Thu 00:16]
-** TODO Setting start value - knobs, input, styled components
-** TODO Set value initially - wrapper, knobs for value)
+** DONE Setting start value - knobs, input, styled components
+   CLOSED: [2018-07-26 Thu 15:56]
 ** TODO Save on click
 ** TODO Highlight stars on hover - actions panel for investigating mousemove, mouse enter, mouse leave
 ** TODO Save to an api - Context
