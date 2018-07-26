@@ -1,19 +1,21 @@
 import React from 'react';
 
+import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+import styled from 'styled-components'
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+
+const Ducky = styled(({type=`speak`}) => (
+    <button>The Ducky will {type}</button>
+))``
+
+storiesOf('Ducky', module)
+    .addDecorator(withKnobs)
+    .add(`basic`, () => (
+        <Ducky type={text(`Type Attribute`, `jump`)}/>
+    ))
