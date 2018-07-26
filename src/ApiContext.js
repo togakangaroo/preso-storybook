@@ -1,5 +1,11 @@
 import React from 'react'
 
-export const ApiContext = React.createContext()
+const ApiContext = React.createContext()
+export const ApiProvider = ApiContext.Provider
+
+export const withApiContext = (Component) => (props) =>
+    React.createElement(ApiContext.Consumer, null, (api) =>
+        React.createElement(Component, {...props, api})
+    )
 
 export default ApiContext

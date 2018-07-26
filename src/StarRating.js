@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import When from './When.js'
-import ApiContext from './ApiContext.js'
+import {withApiContext} from './ApiContext.js'
 
 const repeat = times => fn => Array(times).fill(0).map(fn)
 const isNonZeroFalsy = v => !v && v !== 0
@@ -65,10 +65,6 @@ export const BareApiStarRating = class extends Component {
     }
 }
 
-export const ApiStarRating = (props) => (
-    <ApiContext.Consumer>{(api) => (
-        <BareApiStarRating {...props} api={api} />
-    )}</ApiContext.Consumer>
-)
+export const ApiStarRating = withApiContext(BareApiStarRating)
 
 export default StarRating

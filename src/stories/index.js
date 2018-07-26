@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import {StarRating, ApiStarRating} from '../StarRating.js'
-import {ApiContext} from '../ApiContext.js'
+import {ApiProvider} from '../ApiContext.js'
 
 const wait = (ms, val) => new Promise((resolve) =>
     setTimeout(() => resolve(val), ms)
@@ -35,10 +35,10 @@ storiesOf(`Star System`, module)
             onClick={action(`Star click`)} />
     ))
     .add(`Api bound star rating`, () => (
-        <ApiContext.Provider value={getApi()}>
+        <ApiProvider value={getApi()}>
             <ApiStarRating
                 starId={number(`Star Id`, 123)}
                 starCount={number(`Star Count`, 5)}
                 onClick={action(`Star click`)} />
-        </ApiContext.Provider>
+        </ApiProvider>
     ))

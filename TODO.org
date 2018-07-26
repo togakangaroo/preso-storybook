@@ -1,4 +1,4 @@
-* Todo [77%]
+* Todo [88%]
 ** DONE Install knobs, stlyed components, babel styled
    CLOSED: [2018-07-25 Wed 22:45]
 ** DONE Five stars - basic react components
@@ -14,6 +14,7 @@
    CLOSED: [2018-07-26 Thu 16:45]
 ** DONE Save to an api - Context
    CLOSED: [2018-07-26 Thu 17:15]
-** TODO Higher Order Context component
+** DONE Higher Order Context component
+   CLOSED: [2018-07-26 Thu 17:20]
 
 
