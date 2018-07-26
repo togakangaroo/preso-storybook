@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import When from './When.js'
+import ApiContext from './ApiContext.js'
 
 const repeat = times => fn => Array(times).fill(0).map(fn)
 const isNonZeroFalsy = v => !v && v !== 0
@@ -42,7 +43,7 @@ export const StarRating = styled(({starCount=5, value=5, className, onClick=noop
     }
 `
 
-export const ApiStarRating = class extends Component {
+export const BareApiStarRating = class extends Component {
     render = () => (
         <When value={this.state && this.state.value} render={() => (
             <StarRating {...this.props} {...(this.state)} onClick={this.onClick} />
@@ -63,5 +64,11 @@ export const ApiStarRating = class extends Component {
         getStarRating(starId).then(value => this.setState({value}))
     }
 }
+
+export const ApiStarRating = (props) => (
+    <ApiContext.Consumer>{(api) => (
+        <BareApiStarRating {...props} api={api} />
+    )}</ApiContext.Consumer>
+)
 
 export default StarRating
